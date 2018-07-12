@@ -18,25 +18,17 @@ namespace ParsingTXT
 
         public List<string> ParseText(string searchedWord)
         {
+            var text = _text.Split(new char[] { '.' }, StringSplitOptions.RemoveEmptyEntries);
             var sentences = new List<string>();
-            string text = _text.Replace(".", "..");
-            var pattern = @"/((\.)[\n 0-9A-Za-z-]+( " + searchedWord + @" )[\n 0-9A-Za-z-]+(\.))|((\." + searchedWord + @" )|(\. " + searchedWord + @" )[\n 0-9A-Za-z-]+(\\.))|((\\.)[\n 0-9A-Za-z-]+( " + searchedWord + @"\\.))/";
-            Regex regex = new Regex(pattern);
-                //@"((\.)[\n0-9A-Za-z-]+({Regex.Escape(searchedWord)})[\n0-9A-Za-z-]+(\.))|((\.{Regex.Escape(searchedWord)} )|(\. {Regex.Escape(searchedWord)} )[\n 0-9A-Za-z-]+(\.))|((\.)[\n 0-9A-Za-z-]+({Regex.Escape(searchedWord)}\.))"
-            
-            MatchCollection matches = regex.Matches(text);
-            if (matches.Count > 0)
+            foreach (var sentence in text)
             {
-                foreach (Match match in matches)
+                var b = (sentence.Contains(" " + searchedWord + " ")) | (sentence.Contains(searchedWord + " ")) || (sentence.Contains(searchedWord + " "));
+                if (b)
                 {
-                    //Console.WriteLine(match.Value);
-                    sentences.Add(match.Value);
+                    sentences.Add(sentence);
                 }
             }
-            else
-            {
-                Console.WriteLine("match not found");
-            }
+
             return sentences;
         }
     }

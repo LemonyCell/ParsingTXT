@@ -30,53 +30,75 @@ namespace ParsingTXT
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.OpenFileButton = new System.Windows.Forms.Button();
+            this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.SearchedResultTextBox = new System.Windows.Forms.TextBox();
+            this.SaveSentencesButton = new System.Windows.Forms.Button();
+            this.PastResultsTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // button1
+            // OpenFileButton
             // 
-            this.button1.Location = new System.Drawing.Point(610, 23);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(160, 34);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "open file";
-            this.button1.UseVisualStyleBackColor = true;
+            this.OpenFileButton.Location = new System.Drawing.Point(610, 23);
+            this.OpenFileButton.Name = "OpenFileButton";
+            this.OpenFileButton.Size = new System.Drawing.Size(160, 34);
+            this.OpenFileButton.TabIndex = 0;
+            this.OpenFileButton.Text = "open file";
+            this.OpenFileButton.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // SearchTextBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(27, 23);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(523, 34);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.SearchTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SearchTextBox.Location = new System.Drawing.Point(27, 23);
+            this.SearchTextBox.Name = "SearchTextBox";
+            this.SearchTextBox.Size = new System.Drawing.Size(523, 34);
+            this.SearchTextBox.TabIndex = 2;
+            this.SearchTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.SearchTextBox.TextChanged += new System.EventHandler(this.SearchTextBox_TextChanged);
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // textBox2
+            // SearchedResultTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(27, 101);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.textBox2.Size = new System.Drawing.Size(523, 322);
-            this.textBox2.TabIndex = 3;
+            this.SearchedResultTextBox.Location = new System.Drawing.Point(27, 75);
+            this.SearchedResultTextBox.Multiline = true;
+            this.SearchedResultTextBox.Name = "SearchedResultTextBox";
+            this.SearchedResultTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.SearchedResultTextBox.Size = new System.Drawing.Size(523, 106);
+            this.SearchedResultTextBox.TabIndex = 3;
+            // 
+            // SaveSentencesButton
+            // 
+            this.SaveSentencesButton.Location = new System.Drawing.Point(610, 95);
+            this.SaveSentencesButton.Name = "SaveSentencesButton";
+            this.SaveSentencesButton.Size = new System.Drawing.Size(160, 34);
+            this.SaveSentencesButton.TabIndex = 4;
+            this.SaveSentencesButton.Text = "save sentences";
+            this.SaveSentencesButton.UseVisualStyleBackColor = true;
+            // 
+            // PastResultsTextBox
+            // 
+            this.PastResultsTextBox.Location = new System.Drawing.Point(27, 202);
+            this.PastResultsTextBox.Multiline = true;
+            this.PastResultsTextBox.Name = "PastResultsTextBox";
+            this.PastResultsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.PastResultsTextBox.Size = new System.Drawing.Size(523, 236);
+            this.PastResultsTextBox.TabIndex = 5;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.PastResultsTextBox);
+            this.Controls.Add(this.SaveSentencesButton);
+            this.Controls.Add(this.SearchedResultTextBox);
+            this.Controls.Add(this.SearchTextBox);
+            this.Controls.Add(this.OpenFileButton);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -92,11 +114,13 @@ namespace ParsingTXT
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button OpenFileButton;
+        private System.Windows.Forms.TextBox SearchTextBox;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox SearchedResultTextBox;
+        private System.Windows.Forms.Button SaveSentencesButton;
+        private System.Windows.Forms.TextBox PastResultsTextBox;
     }
 }
 
