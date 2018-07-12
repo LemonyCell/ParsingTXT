@@ -14,9 +14,14 @@ namespace ParsingTXT
         [STAThread]
         static void Main()
         {
+            var conn = new Connection();
+            conn.SetConnection();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+
+            conn.CloseConection();
         }
     }
 }

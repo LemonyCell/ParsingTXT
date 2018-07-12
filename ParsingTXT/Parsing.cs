@@ -31,5 +31,45 @@ namespace ParsingTXT
 
             return sentences;
         }
+
+        public List<Sentence> ParseSentences(string searchedWord)
+        {
+            var text = ParseText(searchedWord);
+            var sentences = new List<Sentence>();
+            Sentence s;
+            foreach (var sentence in text)
+            {
+                s.Text = sentence;
+                s.NumberOfMatches = CountWords(sentence, searchedWord);
+                sentences.Add(s);
+            }
+
+            return sentences;
+        }
+
+        private int CountWords(string sentence, string word)
+        {
+            int count = (sentence.Length - sentence.Replace(word, "").Length) / word.Length;
+            return count;
+        }
+
+        public string TurnTheSentence(string sentence)
+        {
+            var words = sentence.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            for (var i=0; i< words.Length; i++)
+            {
+                words[i] = ReverseString(words[i]);
+            }
+            var result = String.Join(" ", words);
+            return result;
+        }
+
+        public string ReverseString(string s)
+        {
+            char[] arr = s.ToCharArray();
+            Array.Reverse(arr);
+            return new string(arr);
+        }
+
     }
 }
