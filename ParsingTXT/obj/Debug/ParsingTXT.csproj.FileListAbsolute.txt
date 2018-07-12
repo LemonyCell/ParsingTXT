@@ -1,0 +1,10 @@
+C:\Users\Vitya\OneDrive\Documents\алгоритмування\C#\ParsingTXT\ParsingTXT\obj\Debug\ParsingTXT.csprojAssemblyReference.cache
+C:\Users\Vitya\OneDrive\Documents\алгоритмування\C#\ParsingTXT\ParsingTXT\obj\Debug\ParsingTXT.Form1.resources
+C:\Users\Vitya\OneDrive\Documents\алгоритмування\C#\ParsingTXT\ParsingTXT\obj\Debug\ParsingTXT.Properties.Resources.resources
+C:\Users\Vitya\OneDrive\Documents\алгоритмування\C#\ParsingTXT\ParsingTXT\obj\Debug\ParsingTXT.csproj.GenerateResource.cache
+C:\Users\Vitya\OneDrive\Documents\алгоритмування\C#\ParsingTXT\ParsingTXT\obj\Debug\ParsingTXT.csproj.CoreCompileInputs.cache
+C:\Users\Vitya\OneDrive\Documents\алгоритмування\C#\ParsingTXT\ParsingTXT\bin\Debug\ParsingTXT.exe.config
+C:\Users\Vitya\OneDrive\Documents\алгоритмування\C#\ParsingTXT\ParsingTXT\bin\Debug\ParsingTXT.exe
+C:\Users\Vitya\OneDrive\Documents\алгоритмування\C#\ParsingTXT\ParsingTXT\bin\Debug\ParsingTXT.pdb
+C:\Users\Vitya\OneDrive\Documents\алгоритмування\C#\ParsingTXT\ParsingTXT\obj\Debug\ParsingTXT.exe
+C:\Users\Vitya\OneDrive\Documents\алгоритмування\C#\ParsingTXT\ParsingTXT\obj\Debug\ParsingTXT.pdb
